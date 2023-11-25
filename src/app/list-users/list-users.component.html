@@ -1,0 +1,15 @@
+<table>
+    <tr>
+        <td>ID</td>
+        <td>User Name</td>
+        <td>Email</td>
+        <td>Picture</td>
+    </tr>
+    <tr *ngFor="let u of users">
+        <td>{{u.id}}</td>
+        <td>{{u.username}}</td>
+        <td>{{u.email}}</td>
+        <td><img [src]="u.picture" width="50" height="50"></td>
+        <td><button (click)="deleteUser(u)">Delete</button></td>
+    </tr>
+</table>

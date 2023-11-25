@@ -1,10 +1,7 @@
 <app-navbar></app-navbar>
-<app-residences></app-residences>
-<h1>{{title}}</h1>
-
+<!--<h1>{{title}}</h1>
 id : {{product.id}}<br>
 Name :{{product.name}}
-
 <div *ngIf="products.length === 0">
 <p>Pas de produit</p>
 </div>
@@ -22,4 +19,6 @@ Name :{{product.name}}
         <td><button [disabled]="p.quantity == 0" (click)="Acheter(p)">Buy</button></td>
     </tr>
 </table>
-</div>
+</div>-->
+<router-outlet></router-outlet>
+
