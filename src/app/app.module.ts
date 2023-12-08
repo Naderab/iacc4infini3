@@ -8,6 +8,10 @@ import { ResidencesComponent } from './residences/residences.component';
 import { ListUsersComponent } from './list-users/list-users.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailsUserComponent } from './details-user/details-user.component';
+import { FormResidenceComponent } from './form-residence/form-residence.component';
+import { ApartmentsComponent } from './apartments/apartments.component';
+import { FormApartmentComponent } from './form-apartment/form-apartment.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +20,15 @@ import { DetailsUserComponent } from './details-user/details-user.component';
     ResidencesComponent,
     ListUsersComponent,
     NotFoundComponent,
-    DetailsUserComponent
+    DetailsUserComponent,
+    FormResidenceComponent,
+    ApartmentsComponent,
+    FormApartmentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

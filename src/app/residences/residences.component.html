@@ -11,6 +11,7 @@
         <td>{{r.address}}</td>
         <td><img [src]="r.image" width="80" height="80"></td>
         <td><button (click)="showApartement(r)">Show Appartement</button></td>
+        <td><a [routerLink]="['/residence',r.id]">Détails</a></td>
         <!--<td><img src="{{r.image}}"></td>-->
     </tr>
 </table>
