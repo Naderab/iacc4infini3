@@ -1,1 +1,43 @@
-<p>form-apartment works!</p>
+<form [formGroup]="apartForm">
+    <div class="mb-3">
+        <label>Apart Num</label>
+        <input type="text" formControlName="appartNum" class="form-control">
+        <div class="alert alert-danger" 
+        *ngIf="apartForm.get('appartNum')!.invalid && apartForm.get('appartNum')!.touched">
+        <div *ngIf="apartForm.get('appartNum')!.errors!['required']">Apart num is required !</div>
+        <div *ngIf="apartForm.get('appartNum')!.errors!['pattern']">Apart num accept only numbers!</div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label>Floor Num</label>
+        <input type="text" formControlName="floorNum" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label>Surface</label>
+        <input type="text" formControlName="surface" class="form-control">
+    </div>
+    
+    <div class="mb-3">
+        <label>Terrace</label>
+        <input type="radio" formControlName="terrace" value="oui">Oui
+        <input type="radio" formControlName="terrace" value="non">Non
+    </div>
+    <div class="mb-3" *ngIf="apartForm.get('terrace')!.value === 'oui'">
+        <label>Surface terrace</label>
+        <input type="text" formControlName="surfaceTerrace" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label>Category</label>
+        <input type="radio" formControlName="category" value="S+1">S+1
+        <input type="radio" formControlName="category" value="S+2">S+2
+        <input type="radio" formControlName="category" value="S+3">S+3
+
+    </div>
+    <div class="mb-3">
+        <label>Description</label>
+        <textarea  formControlName="description" class="form-control"></textarea>
+    </div>
+    <div class="mb-3">
+        <input type="submit"  class="btn btn-primary">
+    </div>
+</form>
